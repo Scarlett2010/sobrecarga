@@ -1,57 +1,37 @@
-class Animal {
-    public void hacerSonido() {
-        System.out.println("Haciendo sonido genérico");
+class Vehiculo {
+    public void acelerar() {
+        System.out.println("Acelera de 0 a ");
     }
 }
-class Perro extends Animal {
+class Auto extends Vehiculo {
     @Override
-    public void hacerSonido() {
-        System.out.println("     Gua, gua");
+    public void acelerar() {
+        System.out.println("     100 el auto");
     }
 }
-class Gato extends Animal {
+class Bicicleta extends Vehiculo {
     @Override
-    public void hacerSonido() {
-        System.out.println("     Meow, meow");
+    public void acelerar() {
+        System.out.println("     50 la bicicleta");
     }
 }
+class Avion extends Vehiculo {
+    @Override
+    public void acelerar() {
+        System.out.println("     200 el avion");
+    }
+}
+
 
 class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal();
-        Perro perro = new Perro();
-        Gato gato = new Gato();
-        animal.hacerSonido(); // Imprime "Haciend sonido genérico"
-        perro.hacerSonido(); // Imprime "Gua, gua"
-        gato.hacerSonido(); // Imprime "Meow, moew"
-
-    }
-}
-/*class Animal {
-    //le puedo dejar vacio sin metodo a la superclase
-    }
-}
-class Perro extends Animal {
-    //@Override le quito esto xq no esta sobre escribiendo o sobrecargando
-    public void hacerSonido() {
-        System.out.println("     Gua, gua");
-    }
-}
-class Gato extends Animal {
-    //@Override le quito esto xq no esta sobre escribiendo o sobrecargando
-    public void hacerSonido() {
-        System.out.println("     Meow, meow");
-    }
-}
-
-class Main {
-    public static void main(String[] args) {
-        Animal animal = new Animal();
-        Perro perro = new Perro();
-        Gato gato = new Gato();
-        //animal.hacerSonido();  Imprime "Haciend sonido genérico" (ESTO YA NO SE IMPRIMIRA)
-        perro.hacerSonido(); // Imprime "Gua, gua"
-        gato.hacerSonido(); // Imprime "Meow, moew"
-
+        Vehiculo vehiculo = new Vehiculo();
+        Auto auto1 = new Auto();
+        Bicicleta bicicleta1 = new Bicicleta();
+        Avion avion1 = new Avion();
+        vehiculo.acelerar(); // Imprime "acelera de 0 a"
+        auto1.acelerar(); // Imprime
+        bicicleta1.acelerar(); // Imprime
+        avion1.acelerar(); // Imprime
     }
 }
